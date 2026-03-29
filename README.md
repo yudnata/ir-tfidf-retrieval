@@ -1,26 +1,25 @@
-# TF-IDF Information Retrieval System 🐱
+# Cat Breed Information Retrieval System (TF-IDF) 🐱
 
-Sistem Temu Kembali Informasi cerdas menggunakan metode **TF-IDF (Term Frequency - Inverse Document Frequency)** untuk melakukan perangkingan dokumen berdasarkan relevansi query.
+An Advanced Information Retrieval system using the **TF-IDF (Term Frequency - Inverse Document Frequency)** method to rank documents based on query relevance.
 
-## Preview Aplikasi
-![Sistem Temu Kembali Informasi TF-IDF](screenshoot/screenshot.png)
-*(Pastikan Bapak simpan gambar screenshot-nya di folder: screenshoot/screenshot.png)*
+## App Preview
+![TF-IDF Information Retrieval System Interface](screenshoot/screenshoot.png)
 
-## Fitur Utama
-- **Preprocessing Modern**: Case folding, penghapusan tanda baca, Stopword removal, dan Stemming menggunakan library Sastrawi.
-- **Natural Sorting**: Dokumen terurut secara cerdas (D1, D2, ..., D10, D20).
+## Core Features
+- **Modern Preprocessing**: Case folding, punctuation removal, Stopword removal, and Stemming using the Sastrawi library.
+- **Natural Sorting**: Intelligently sorted document list (D1, D2, ..., D10, D20).
 - **Multi-Tab Visualization**:
-  - **TF-IDF Matrix**: Bobot akhir setiap kata.
-  - **Term Frequency**: Tabel frekuensi mentah dan ternormalisasi.
-  - **DF & IDF**: Menampilkan tingkat keunikan setiap kata.
-  - **Top Terms**: Ringkasan kata paling penting di setiap dokumen.
-- **Advanced Query Search**: Pencarian yang memberikan skor relevansi dan detail perhitungan matematika untuk setiap kata kunci.
+  - **TF-IDF Matrix**: Displays the final weight of each term for every document.
+  - **Term Frequency**: Tables showing raw counts and normalized TF values.
+  - **DF & IDF**: Measures term uniqueness and importance across the corpus.
+  - **Top Terms**: A card-based summary of the most important words per document.
+- **Advanced Query Search**: A powerful search bar that provides relevance scores and detailed mathematical calculations.
 
 ## Dataset (Corpus)
-Menggunakan **20 Dokumen (D1-D20)** yang berisi informasi mendalam tentang berbagai ras kucing dunia seperti Persia, Maine Coon, Bengal, hingga Munchkin.
+Utilizes a comprehensive dataset of **20 Documents (D1-D20)** covering detailed information about various cat breeds such as Persian, Maine Coon, Bengal, Ragdoll, and many others.
 
-## Teknologi
-- **Bahasa**: Python 3.x
+## Tech Stack
+- **Language**: Python 3.x
 - **GUI**: Tkinter & TTK (Custom Sleek Design)
-- **Math**: Numpy
-- **NLP**: Sastrawi (Indonesian Stemmer)
+- **Mathematical Tool**: Numpy
+- **NLP Library**: Sastrawi (Indonesian Language Stemmer)
