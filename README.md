@@ -3,8 +3,8 @@
 Sistem Temu Kembali Informasi cerdas menggunakan metode **TF-IDF (Term Frequency - Inverse Document Frequency)** untuk melakukan perangkingan dokumen berdasarkan relevansi query.
 
 ## Preview Aplikasi
-![Sistem Temu Kembali Informasi TF-IDF](screenshot.png)
-*(Pastikan Bapak simpan gambar screenshot-nya di folder project dengan nama: screenshot.png)*
+![Sistem Temu Kembali Informasi TF-IDF](screenshoot/screenshot.png)
+*(Pastikan Bapak simpan gambar screenshot-nya di folder: screenshoot/screenshot.png)*
 
 ## Fitur Utama
 - **Preprocessing Modern**: Case folding, penghapusan tanda baca, Stopword removal, dan Stemming menggunakan library Sastrawi.
