@@ -43,10 +43,26 @@ def tfidf_query(query_str, vocab, doc_ids, idf, tfidf_matrix):
             total += term_scores[term].get(doc_id, 0.0)
         doc_scores[doc_id] = round(total, 6)
 
-    ranked_docs = sorted(
-        [(doc_id, score) for doc_id, score in doc_scores.items() if score > 0],
-        key=lambda x: (-x[1], natural_sort_key(x[0])),
-    )
+    is_all_zero = all(score == 0.0 for score in doc_scores.values())
+    
+    if is_all_zero:
+        ranked_docs = []
+        for doc_id in doc_ids:
+            has_word = False
+            for term in query_tokens:
+                if term in vocab:
+                    idx = vocab.index(term)
+                    j = doc_ids.index(doc_id)
+                    if idf.get(term, 0) == 0.0:
+                        has_word = True
+                        break
+            if has_word:
+                ranked_docs.append((doc_id, 0.0))
+    else:
+        ranked_docs = sorted(
+            [(doc_id, score) for doc_id, score in doc_scores.items() if score > 0],
+            key=lambda x: (-x[1], natural_sort_key(x[0])),
+        )
 
     detail_lines = []
     detail_lines.append(f'Query: "{query_str}"')

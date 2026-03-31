@@ -595,7 +595,7 @@ def build_query_view(parent, colors, vocab, doc_ids, idf, tfidf_matrix, document
 
     tk.Label(
         input_frame,
-        text='Contoh: "Kucing Persia", "Kaki Pendek", "Raksasa Lembut", "Ekor Pendek", "Hidung Pesek"',
+        text='Contoh pencarian: "kucing turki", "kucing mendengkur", "gumpalan bulu", "vaksin kucing", "kucing pemburu"',
         font=("Inter", 9),
         fg="#888888",
         bg=colors["bg_main"],

@@ -15,6 +15,8 @@ def preprocess(text):
 
     text = text.replace("persia", "persiax")
 
+    text = re.sub(r"\d+", "", text)
+    
     text = re.sub(r"[^\w\s]", "", text)
     tokens = text.split()
     tokens = [t for t in tokens if t not in stopwords]
