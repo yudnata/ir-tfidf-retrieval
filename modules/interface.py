@@ -873,7 +873,16 @@ def build_query_view(parent, colors, vocab, doc_ids, idf, tfidf_matrix, document
                 fg="#2E7D32",
             )
 
-            escaped_keywords = [re.escape(k) for k in query.split() if len(k) > 0]
+            escaped_keywords = []
+
+            for raw_k in query.split():
+                if len(raw_k) > 0:
+                    escaped_keywords.append(re.escape(raw_k))
+
+            for tk_term in query_terms:
+                if len(tk_term) > 0 and tk_term not in escaped_keywords:
+                    escaped_keywords.append(re.escape(tk_term))
+
             pattern = (
                 re.compile(f"({'|'.join(escaped_keywords)})", re.IGNORECASE)
                 if escaped_keywords
